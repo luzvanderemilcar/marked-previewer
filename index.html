@@ -3,34 +3,37 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Markdown Previewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Luzvander EMILCAR">
+  <meta name="description" content="This is a marked text editor with preview capability">
+  <title>Markdown Previewer</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
   <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
   <header>
-    <h2>Markdown</h2>
     <div id="view-control">
       <button id="view-controller" class="btn btn-secondary" type="button"><i class="fa-regular fa-eye"></i></button>
       <button id="eraser" class="btn btn-danger"><i class="fa-solid fa-eraser"></i></button>
     </div>
   </header>
   <main>
-    <div class="card" id="preview-div">
-      <div class="card-header">
-        <h3>Preview</h3>
-      </div>
-      <div id="preview" class="card-body">
-      </div>
-    </div>
-    <div class="card" id="editor-div">
+    <div id="editor-div">
       <div class="card-header">
         <h3>Editor</h3>
       </div>
 
       <div class="card-body">
-        <textarea id="editor" cols="35" rows="30" autofocus></textarea>
+        <textarea id="editor" cols="30" rows="30" placeholder="Type in your marked text" autofocus></textarea>
+      </div>
+    </div>
+    <div class="card" id="preview-div">
+      <div class="card-header">
+        <h3>Preview</h3>
+      </div>
+      <div id="preview" class="card-body">
       </div>
     </div>
   </main>

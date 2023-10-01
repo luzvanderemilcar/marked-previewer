@@ -1,12 +1,13 @@
 body {
-  margin : 0 5px;
+  margin : 0;
+  padding-inline: 5px;
 }
 
 header {
-  width: 100%;
+padding-top: 5%;
+  position: fixed;
   top : 0;
   background-color: white;
-  position: fixed;
   z-index : 1;
 }
 
@@ -17,7 +18,7 @@ header {
 }
 
 main {
-  margin-top : 2%;
+  margin-top : 7%;
   display: grid;
   grid-template-columns: 5fr 7fr;
 }
@@ -27,19 +28,9 @@ textarea {
 }
 
 #preview-div {
-display: none;
-}
-
-#preview-div.card {
-  width: 60%;
-  position: absolute;
   box-shadow: 1px 1px 1px #999;
-  border-radius : 5%;
-  blur-radius : 5;
-  top : 20%;
-  right: 10px;
-  min-height : 50%;
-  margin: 5rem 5px 1rem;
+  min-height : 250px;
+  margin: 10% 5px 1rem;
 }
 
 .card-header {
@@ -50,8 +41,8 @@ display: none;
   margin: 5px;
 }
 
-#editor-div.card {
-  width: 70%;
+#editor-div {
+  display: block;
   margin: 10% 5px 1rem;
   box-shadow: 1px 1px 1px #999;
 }
@@ -61,11 +52,12 @@ display: none;
     display : unset;
   }
   
-  #preview-div.card {
-    position: static;
-    width: auto;
-  }
-  #editor-div.card {
-    width : auto ;
-  }
+#preview-div {
+display: none;
+width: auto;
+}
+
+#editor-div {
+  display: block;
+}
 }
