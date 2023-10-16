@@ -28,6 +28,7 @@ textarea {
 }
 
 #preview-div {
+  position: relative;
   box-shadow: 1px 1px 1px #999;
   min-height : 250px;
   margin: 10% 5px 1rem;
@@ -45,6 +46,12 @@ textarea {
   display: block;
   margin: 10% 5px 1rem;
   box-shadow: 1px 1px 1px #999;
+}
+
+#copy-button-div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 @media (max-width : 500px) {
