@@ -17,21 +17,23 @@ padding-top: 5%;
   display: inline;
 }
 
-main {
-  margin-top : 7%;
-  display: grid;
-  grid-template-columns: 5fr 7fr;
-}
-
 textarea {
   margin: 5px;
 }
 
+#editor-div {
+    display: block;
+    margin: 10% 5px 1rem;
+    box-shadow: 1px 1px 1px #999;
+}
+
 #preview-div {
-  position: relative;
-  box-shadow: 1px 1px 1px #999;
-  min-height : 250px;
-  margin: 10% 5px 1rem;
+    display: none;
+    width: auto;
+    margin: 10% 5px 1rem;
+    box-shadow: 1px 1px 1px #999;
+    min-height: 540px;
+    
 }
 
 .card-header {
@@ -42,29 +44,52 @@ textarea {
   margin: 5px;
 }
 
-#editor-div {
-  display: block;
-  margin: 10% 5px 1rem;
-  box-shadow: 1px 1px 1px #999;
-}
 
 #copy-button-div {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 7%;
 }
 
-@media (max-width : 500px) {
-  main {
-    display : unset;
-  }
-  
+@media (max-width : 600) {
+    /* CSS rules for compact screens */
+#editor-div {
+  display : block;
+}
+
 #preview-div {
-display: none;
-width: auto;
+  display: none;
+}
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* CSS rules for medium screens */
+    
+main {
+    margin-top: 7%;
+    display: grid;
+    grid-template-columns: 5fr 7fr;
 }
 
 #editor-div {
   display: block;
 }
+
+#preview-div {
+  /*position: relative;*/
+}
+
+
+}
+
+@media (min-width: 1025px) {
+    /* CSS rules for extended screens */
+    #editor-div {
+        display: block;
+    }
+    
+    #preview-div {
+        display: block;
+    }
 }

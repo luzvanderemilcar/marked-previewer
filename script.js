@@ -43,7 +43,7 @@ function toggleView() {
         }
     } else {
         if (Editor.style.display == "none") {
-
+            Editor.style.display = "block";
         }
         if (Preview.style.display == "block") {
             Preview.style.display = "none";
