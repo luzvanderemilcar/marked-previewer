@@ -1,47 +1,50 @@
 body {
-  margin : 0;
-  padding-inline: 5px;
+    margin: 0;
+    padding-inline: 5px;
 }
 
 header {
-padding-top: 5%;
-  position: fixed;
-  top : 0;
-  background-color: white;
-  z-index : 1;
+    padding-top: 5%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 #view-control {
-  position: fixed;
-  right : 10%;
-  display: inline;
+    display: inline;
+    position: fixed;
+    right: 10%;
 }
 
 textarea {
-  margin: 5px;
+    margin: 5px;
+}
+
+i {
+    padding: 0;
+    margin: 0;
 }
 
 #editor-div {
-    display: block;
     margin: 10% 5px 1rem;
     box-shadow: 1px 1px 1px #999;
 }
 
 #preview-div {
-    display: none;
     width: auto;
     margin: 10% 5px 1rem;
     box-shadow: 1px 1px 1px #999;
     min-height: 540px;
-    
+
 }
 
 .card-header {
-  text-align : center;
+    text-align: center;
 }
 
 .card-body {
-  margin: 5px;
+    margin: 5px;
 }
 
 
@@ -52,43 +55,45 @@ textarea {
 }
 
 @media (max-width : 600) {
-    /* CSS rules for compact screens */
-#editor-div {
-  display : block;
-}
 
-#preview-div {
-  display: none;
-}
+    /* CSS rules for compact screens */
+    #editor-div {
+        display: block;
+    }
+
+    #preview-div {
+        display: none;
+    }
 
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
     /* CSS rules for medium screens */
-    
-main {
-    margin-top: 7%;
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-}
 
-#editor-div {
-  display: block;
-}
+    main {
+        margin-top: 7%;
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+    }
 
-#preview-div {
-  /*position: relative;*/
-}
+    #editor-div {
+        display: block;
+    }
+
+    #preview-div {
+        /*position: relative;*/
+    }
 
 
 }
 
 @media (min-width: 1025px) {
+
     /* CSS rules for extended screens */
     #editor-div {
         display: block;
     }
-    
+
     #preview-div {
         display: block;
     }

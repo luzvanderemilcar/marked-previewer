@@ -8,7 +8,7 @@ const Eraser = document.querySelector("#eraser");
 const copyMarkedButton = document.querySelector("#copy-text");
 const copyHTMLButton = document.querySelector("#copy-html");
 
-let smallScreen;
+let compactWindow;
 
 // Event Listeners
 editorField.addEventListener("input", updateValue);
@@ -31,7 +31,7 @@ function updateValue(e) {
 
 // switch view between editor and preview 
 function toggleView() {
-    if (smallScreen) {
+    if (compactWindow) {
         if (Editor.style.display == "none") {
             Preview.style.display = "none"
             Editor.style.display = "block";
@@ -56,11 +56,11 @@ function toggleView() {
 }
 
 // Check the size of screen base on media query
-function screenWidthStateLever(media) {
+function widthStateLever(media) {
     if (media.matches) {
-        smallScreen = true;
+        compactWindow = true;
     } else {
-        smallScreen = false;
+        compactWindow = false;
     }
 }
 
@@ -77,7 +77,7 @@ function copyHTMLText() {
     cb.writeText(previewBody.innerHTML).then(() => alert('HTML Text copied'));
     }
 }
-const smallScreenMedia = window.matchMedia("(max-width: 500px)");
+const compactWindowMedia = window.matchMedia("(max-width: 600px)");
 
-screenWidthStateLever(smallScreenMedia);
-smallScreenMedia.addListener(screenWidthStateLever);
+widthStateLever(compactWindowMedia);
+compactWindowMedia.addListener(widthStateLever);
