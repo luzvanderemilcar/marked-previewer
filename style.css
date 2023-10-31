@@ -36,6 +36,7 @@ i {
     margin: 10% 5px 1rem;
     box-shadow: 1px 1px 1px #999;
     min-height: 540px;
+    display: none;
 
 }
 
